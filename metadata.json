@@ -1,0 +1,6 @@
+{
+  "name": "Jamia Taleemul Quran",
+  "description": "Official website of Jamia Taleemul Quran (جامعہ تعلیم القرآن) - Islamic educational institution in Noida, UP, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
