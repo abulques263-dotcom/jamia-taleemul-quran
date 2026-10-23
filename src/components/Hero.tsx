@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
 
           {/* Admission Button */}
           <a
-            href="#admission"
+            href="#/academics"
             id="hero-admission-btn"
             className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg bg-[#d4af37] text-[#064e3b] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#e5c158] transition-all"
           >
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
 
           {/* Contact Us Button */}
           <a
-            href="#contact"
+            href="#/support"
             id="hero-contact-btn"
             className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg bg-[#064e3b] text-white border border-[#d4af37] font-bold text-xs uppercase tracking-wider hover:bg-[#085f48] transition-all shadow-md"
           >
