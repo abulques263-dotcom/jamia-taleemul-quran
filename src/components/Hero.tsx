@@ -4,7 +4,7 @@ import { Sparkles, Phone, MessageCircle, ArrowDown, GraduationCap, ShieldCheck, 
 
 export const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-islamic-pattern text-white">
+    <section id="home" className="relative pt-28 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-islamic-pattern text-white">
       {/* Background Decorative Gradient Orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-[#064e3b]/80 via-[#d4af37]/15 to-transparent blur-3xl rounded-full pointer-events-none" />
 
@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
         <div className="my-3 sm:my-5">
           <h1 
             dir="rtl"
-            className="urdu text-5xl sm:text-7xl md:text-8xl font-bold tracking-normal text-white drop-shadow-md leading-[2.2]"
+            className="urdu text-4xl sm:text-6xl md:text-7xl font-bold tracking-normal text-white drop-shadow-md leading-[2.2]"
           >
             {INSTITUTION_DATA.nameUrdu}
           </h1>
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Subtle Ornamental Divider */}
-        <div className="flex items-center justify-center gap-3 my-5 sm:my-6 opacity-90">
+        <div className="flex items-center justify-center gap-3 my-3 sm:my-4 opacity-90">
           <div className="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
           <div className="w-2.5 h-2.5 rotate-45 border border-[#d4af37] bg-[#064e3b]"></div>
           <div className="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent"></div>
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* English Tagline Subtitle */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-serif italic leading-relaxed mb-8 sm:mb-10 text-balance">
+        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-serif italic leading-relaxed mb-5 sm:mb-6 text-balance">
           {INSTITUTION_DATA.taglineEnglish}
         </p>
 
@@ -92,8 +92,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Quick Highlights Strip */}
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
-          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-[#f8f6f0]/10 border border-[#d4af37]/30 backdrop-blur-sm">
+        <div className="mt-7 sm:mt-9 pt-5 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
+          <div className="flex items-center gap-3.5 p-3 rounded-xl bg-[#f8f6f0]/10 border border-[#d4af37]/30 backdrop-blur-sm">
             <div className="w-10 h-10 rounded-lg bg-[#d4af37] text-[#064e3b] flex items-center justify-center flex-shrink-0 font-bold">
               <ShieldCheck className="w-5 h-5" />
             </div>
