@@ -8,14 +8,14 @@ export const Footer: React.FC = () => {
   };
 
   const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Taleem & Courses', href: '#courses' },
-    { label: 'Our Teachers', href: '#teachers' },
-    { label: 'Admission', href: '#admission' },
-    { label: 'Prospectus', href: '#prospectus' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '#/home' },
+    { label: 'About & Courses', href: '#/academics' },
+    { label: 'Teachers & Staff', href: '#/academics' },
+    { label: 'Admissions', href: '#/academics' },
+    { label: 'Qur’an Learning', href: '#/academics' },
+    { label: 'Zakat / Sadqa / Fitra', href: '#/support' },
+    { label: 'Photo Gallery', href: '#/support' },
+    { label: 'Contact', href: '#/support' },
   ];
 
   return (
