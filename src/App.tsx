@@ -45,8 +45,8 @@ export default function App() {
       <Header onOpenProspectus={() => setIsProspectusModalOpen(true)} />
       <main className="flex-grow">
         {page === 'home' && <>
+          <div className="pt-24 sm:pt-28"><DonationSection /></div>
           <Hero />
-          <DonationSection />
           <section className="bg-white py-12 sm:py-16">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
               <div className="mb-8 text-center">
