@@ -24,6 +24,7 @@ export default function App() {
       <Header onOpenProspectus={() => setIsProspectusModalOpen(true)} />
       <main className="flex-grow">
         <Hero />
+        <DonationSection />
         <AboutSection />
         <CoursesSection />
         <QuranSection />
@@ -31,7 +32,6 @@ export default function App() {
         <AdmissionSection />
         <ProspectusSection onOpenModal={() => setIsProspectusModalOpen(true)} />
         <GallerySection />
-        <DonationSection />
         <ContactSection />
       </main>
       <Footer />
