@@ -89,3 +89,29 @@
   }
 }
 
+
+/* Compact, clearly separated sections: keep the premium look without excessive scrolling. */
+main > section {
+  padding-top: 3.25rem !important;
+  padding-bottom: 3.25rem !important;
+  scroll-margin-top: 6.5rem;
+}
+main > section .mb-14 { margin-bottom: 2rem !important; }
+main > section h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.65rem) !important;
+  line-height: 1.75 !important;
+}
+main > section h3 { line-height: 1.35; }
+main > section .gap-8 { gap: 1.25rem; }
+main > section .sm\\:p-8 { padding: 1.25rem; }
+footer .pt-16 { padding-top: 2.75rem; }
+footer .pb-12 { padding-bottom: 2rem; }
+footer .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+footer .pb-12 { padding-bottom: 2rem; }
+@media (max-width: 640px) {
+  main > section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  main > section .mb-14 { margin-bottom: 1.5rem !important; }
+}
