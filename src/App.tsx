@@ -33,7 +33,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo(0, 0);
   }, [page]);
 
   const goTo = (next: Page) => {
@@ -96,7 +96,7 @@ export default function App() {
       <Footer />
       <ProspectusModal isOpen={isProspectusModalOpen} onClose={() => setIsProspectusModalOpen(false)} />
       <ChatbotWidget />
-      <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-2 sm:hidden no-print">
+      <div className="fixed bottom-20 right-4 z-40 flex flex-col gap-2 sm:hidden no-print">
         <a href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Jamia%20Taleemul%20Quran`} target="_blank" rel="noopener noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg ring-2 ring-white" aria-label="Chat on WhatsApp"><MessageCircle className="h-6 w-6" /></a>
         <a href={`tel:${INSTITUTION_DATA.phone}`} className="flex h-12 w-12 items-center justify-center rounded-full bg-[#064e3b] text-[#d4af37] shadow-lg ring-2 ring-white" aria-label="Call Jamia Taleemul Quran"><Phone className="h-5 w-5" /></a>
       </div>
