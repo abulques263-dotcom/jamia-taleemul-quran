@@ -54,7 +54,7 @@ export const QuranSection: React.FC = () => {
             <label className="flex flex-1 items-center gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3">
               <span className="shrink-0 text-sm font-semibold text-[#064e3b]">Choose Surah</span>
               <span className="relative flex-1">
-                <select value={selected} onChange={(e) => setSelected(Number(e.target.value)); setShowAllAyahs(false)} className="w-full appearance-none bg-transparent pr-7 text-sm outline-none" aria-label="Choose a Surah">
+                <select value={selected} onChange={(e) => { setSelected(Number(e.target.value)); setShowAllAyahs(false); }} className="w-full appearance-none bg-transparent pr-7 text-sm outline-none" aria-label="Choose a Surah">
                   {surahs.length ? surahs.map((s) => <option key={s.number} value={s.number}>{s.number}. {s.englishName} — {s.name}</option>) : <option value={1}>1. Al-Fatihah</option>}
                 </select>
                 <ChevronDown className="pointer-events-none absolute right-0 top-1/2 h-4 w-4 -translate-y-1/2 text-[#064e3b]" />
