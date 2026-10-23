@@ -8,9 +8,11 @@ import { AdmissionSection } from './components/AdmissionSection';
 import { ProspectusSection } from './components/ProspectusSection';
 import { GallerySection } from './components/GallerySection';
 import { DonationSection } from './components/DonationSection';
+import { QuranSection } from './components/QuranSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProspectusModal } from './components/ProspectusModal';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { Phone, MessageCircle } from 'lucide-react';
 import { INSTITUTION_DATA } from './data/institutionData';
 
@@ -19,15 +21,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fdfbf7] text-[#1a1a1a] font-serif selection:bg-[#064e3b] selection:text-[#d4af37]">
-      
-      {/* Navigation Header */}
       <Header onOpenProspectus={() => setIsProspectusModalOpen(true)} />
-
-      {/* Main Content Sections */}
       <main className="flex-grow">
         <Hero />
         <AboutSection />
         <CoursesSection />
+        <QuranSection />
         <TeachersSection />
         <AdmissionSection />
         <ProspectusSection onOpenModal={() => setIsProspectusModalOpen(true)} />
@@ -35,18 +34,13 @@ export default function App() {
         <DonationSection />
         <ContactSection />
       </main>
-
-      {/* Footer */}
       <Footer />
-
-      {/* Interactive Full Prospectus Document Modal */}
-      <ProspectusModal 
-        isOpen={isProspectusModalOpen} 
-        onClose={() => setIsProspectusModalOpen(false)} 
+      <ProspectusModal
+        isOpen={isProspectusModalOpen}
+        onClose={() => setIsProspectusModalOpen(false)}
       />
-
-      {/* Floating Action Buttons for instant mobile access */}
-      <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 sm:hidden no-print">
+      <ChatbotWidget />
+      <div className="fixed bottom-5 left-5 z-40 flex flex-col gap-2.5 sm:hidden no-print">
         <a
           href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}?text=Assalamu%20Alaikum,%20I%20would%20like%20to%20inquire%20about%20Jamia%20Taleemul%20Quran`}
           target="_blank"
@@ -64,7 +58,6 @@ export default function App() {
           <Phone className="w-5 h-5" />
         </a>
       </div>
-
     </div>
   );
 }
