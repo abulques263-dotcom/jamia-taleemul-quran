@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
 import { CoursesSection } from './components/CoursesSection';
 import { TeachersSection } from './components/TeachersSection';
+import { StudentsSection } from './components/StudentsSection';
 import { AdmissionSection } from './components/AdmissionSection';
 import { ProspectusSection } from './components/ProspectusSection';
 import { GallerySection } from './components/GallerySection';
@@ -33,7 +34,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo(0, 0);
   }, [page]);
 
   const goTo = (next: Page) => {
@@ -46,7 +47,7 @@ export default function App() {
       <main className="flex-grow">
         {page === 'home' && <>
           <Hero />
-          <section className="bg-white py-12 sm:py-16">
+          <section id="explore" className="bg-white py-12 sm:py-16">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
               <div className="mb-8 text-center">
                 <p className="text-xs font-bold uppercase tracking-[.2em] text-[#9a7416]">Explore Jamia</p>
@@ -83,6 +84,7 @@ export default function App() {
           <AboutSection />
           <CoursesSection />
           <QuranSection />
+          <StudentsSection />
           <TeachersSection />
           <AdmissionSection />
           <ProspectusSection onOpenModal={() => setIsProspectusModalOpen(true)} />
