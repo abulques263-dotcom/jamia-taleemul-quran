@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProspectus }) => {
   const navLinks = [
     { label: 'Home', href: '#/home', icon: BookOpen },
     { label: 'About & Learning', href: '#/academics', icon: GraduationCap },
-    { label: 'Gallery & Contact', href: '#/support', icon: HeartHandshake },
+    { label: 'Gallery', href: '#/donate', icon: HeartHandshake },
   ];
 
   return (
@@ -33,10 +33,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProspectus }) => {
           </a>
           <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => <a key={link.label} href={link.href} className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-[#f1d592]">{link.label}</a>)}
-            <a href="#/support" className="ml-2 inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#d4af37] px-4 py-2 text-sm font-bold text-[#102a43] shadow-sm transition hover:bg-[#f1d592]"><HeartHandshake className="h-4 w-4" />Donate</a>
+            <a href="#/donate" className="ml-2 inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#d4af37] px-4 py-2 text-sm font-bold text-[#102a43] shadow-sm transition hover:bg-[#f1d592]"><HeartHandshake className="h-4 w-4" />Donate</a>
           </nav>
           <div className="flex items-center gap-2 lg:hidden">
-            <a href="#/support" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg bg-[#d4af37] px-3 py-2 text-xs font-bold text-[#102a43] sm:text-sm"><HeartHandshake className="h-4 w-4" />Donate</a>
+            <a href="#/donate" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg bg-[#d4af37] px-3 py-2 text-xs font-bold text-[#102a43] sm:text-sm"><HeartHandshake className="h-4 w-4" />Donate</a>
             <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} id="mobile-menu-toggle-btn" className="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#d4af37]" aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={mobileMenuOpen}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
