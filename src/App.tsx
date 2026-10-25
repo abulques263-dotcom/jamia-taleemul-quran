@@ -17,10 +17,10 @@ import { ChatbotWidget } from './components/ChatbotWidget';
 import { Phone, MessageCircle, ArrowRight, BookOpen, GraduationCap, Users } from 'lucide-react';
 import { INSTITUTION_DATA } from './data/institutionData';
 
-type Page = 'home' | 'academics' | 'support';
+type Page = 'home' | 'academics' | 'donate' | 'gallery' | 'contact';
 const readPage = (): Page => {
   const route = window.location.hash.replace(/^#\/?/, '').split('/')[0];
-  return route === 'academics' || route === 'support' ? route : 'home';
+  return ['academics', 'donate', 'gallery', 'contact'].includes(route) ? route as Page : route === 'support' ? 'donate' : 'home';
 };
 
 export default function App() {
@@ -58,7 +58,7 @@ export default function App() {
                 {[
                   { title: 'About & Learning', text: 'Learn about the Jamia, courses and Qur’an education.', icon: BookOpen, route: 'academics' as Page, label: 'Explore learning' },
                   { title: 'Teachers & Admissions', text: 'Meet the teaching team and find admission information.', icon: GraduationCap, route: 'academics' as Page, label: 'View details' },
-                  { title: 'Gallery & Contact', text: 'See photos, ask a question or contact the Jamia.', icon: Users, route: 'support' as Page, label: 'Visit this section' },
+                  { title: 'Gallery & Contact', text: 'See photos, ask a question or contact the Jamia.', icon: Users, route: 'gallery' as Page, label: 'View gallery' },
                 ].map((item) => <button key={item.title} onClick={() => goTo(item.route)} className="group rounded-2xl border border-stone-200 bg-[#fdf8ed] p-5 text-left shadow-sm transition hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-lg sm:p-6">
                   <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#102a43] text-[#f1d592]"><item.icon className="h-6 w-6" /></span>
                   <h3 className="font-serif text-xl font-bold text-[#102a43]">{item.title}</h3>
@@ -79,7 +79,7 @@ export default function App() {
             <p className="text-xs font-bold uppercase tracking-[.2em] text-[#f1d592]">Our institution</p>
             <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">About, Learning & Admissions</h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-200">Everything about the Jamia’s story, learning programmes, teachers and admission process in one place.</p>
-            <a href="#/support" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-xl bg-[#d4af37] px-5 py-3 text-sm font-bold text-[#102a43]">Donate to support learning</a>
+            <a href="#/donate" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-xl bg-[#d4af37] px-5 py-3 text-sm font-bold text-[#102a43]">Donate to support learning</a>
           </div>
           <AboutSection />
           <CoursesSection />
@@ -89,14 +89,24 @@ export default function App() {
           <AdmissionSection />
           <ProspectusSection onOpenModal={() => setIsProspectusModalOpen(true)} />
         </>}
-        {page === 'support' && <>
-          <div className="bg-islamic-pattern px-4 pb-8 pt-32 text-center text-white sm:pt-36">
-            <p className="text-xs font-bold uppercase tracking-[.2em] text-[#f1d592]">Community & connection</p>
-            <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">Donate, Gallery & Contact</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-200">Choose a donation type, explore the gallery, or contact the Jamia. All options are collected in this one easy-to-find section.</p>
+        {page === 'donate' && <>
+          <div className="bg-islamic-pattern relative overflow-hidden px-4 pb-12 pt-32 text-center text-white sm:pb-16 sm:pt-36">
+            <div className="pointer-events-none absolute inset-0 opacity-30"><div className="absolute -left-20 top-10 h-64 w-64 rounded-full border border-[#d4af37]/50" /><div className="absolute -right-16 bottom-0 h-72 w-72 rounded-full border border-[#d4af37]/40" /></div>
+            <div className="relative mx-auto max-w-3xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/50 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-[#f1d592]"><HeartHandshake className="h-4 w-4" /> Support the Jamia</span>
+              <h1 className="mt-5 font-serif text-4xl font-bold leading-tight sm:text-6xl">Give with purpose.<br/><span className="text-[#f1d592]">Support learning.</span></h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-stone-200 sm:text-lg">Choose the type of donation that matches your intention. Every option is in one place, with a direct way to ask the Jamia for verified guidance.</p>
+              <a href="#donation-options" className="mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#d4af37] px-6 py-3 font-bold text-[#102a43] shadow-lg transition hover:bg-[#f1d592]">View donation options <ArrowRight className="h-4 w-4" /></a>
+            </div>
           </div>
           <DonationSection />
+        </>}
+        {page === 'gallery' && <>
+          <div className="bg-islamic-pattern px-4 pb-10 pt-32 text-center text-white sm:pt-36"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#f1d592]">Moments at the Jamia</p><h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">Gallery</h1><p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-200">A glimpse into the learning environment and community life of Jamia Taleemul Quran.</p></div>
           <GallerySection />
+        </>}
+        {page === 'contact' && <>
+          <div className="bg-islamic-pattern px-4 pb-10 pt-32 text-center text-white sm:pt-36"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#f1d592]">We’re here to help</p><h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">Contact the Jamia</h1><p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-200">For admissions, learning programmes, visits or donation enquiries, please get in touch with the team.</p></div>
           <ContactSection />
         </>}
       </main>
