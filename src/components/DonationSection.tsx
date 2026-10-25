@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React;
 import { INSTITUTION_DATA } from '../data/institutionData';
-import { HeartHandshake, Phone, MessageCircle, ShieldCheck, BookOpen, GraduationCap, WalletCards, MoonStar, HandHeart, Sparkles, ChevronDown } from 'lucide-react';
+import { HeartHandshake, Phone, MessageCircle, ShieldCheck, BookOpen, GraduationCap, WalletCards, MoonStar, HandHeart, Sparkles } from 'lucide-react';
 
 const donationTypes = [
   { title: 'Zakat', urdu: 'زکوٰۃ', icon: MoonStar, description: 'A required form of giving for eligible Muslims. Ask the Jamia to confirm whether your Zakat can be accepted for the intended use.', message: 'Assalamu Alaikum, I would like to ask about giving Zakat to Jamia Taleemul Quran. Please confirm eligibility and share verified official details.' },
@@ -11,7 +11,6 @@ const donationTypes = [
 ];
 
 export const DonationSection: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
   return (
     <section id="donation" className="relative overflow-hidden bg-[#fdf8ed] py-10 sm:py-14">
       <div className="pointer-events-none absolute -right-24 -top-20 h-80 w-80 rounded-full bg-[#d4af37]/15 blur-3xl" />
@@ -24,7 +23,7 @@ export const DonationSection: React.FC = () => {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {donationTypes.slice(0, showAll ? donationTypes.length : 3).map((item) => {
+          {donationTypes.map((item) => {
             const Icon = item.icon;
             return <article key={item.title} className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#d4af37] hover:shadow-md sm:p-6">
               <div className="flex items-start justify-between gap-3">
@@ -37,12 +36,6 @@ export const DonationSection: React.FC = () => {
             </article>;
           })}
         </div>
-        <div className="mt-4 text-center">
-          <button type="button" onClick={() => setShowAll(!showAll)} className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#102a43]/20 bg-white px-5 py-3 text-sm font-bold text-[#102a43] hover:border-[#d4af37]">
-            {showAll ? 'Show fewer options' : 'See all donation options'} <ChevronDown className={`h-4 w-4 transition ${showAll ? 'rotate-180' : ''}`} />
-          </button>
-        </div>
-
         <div className="mt-7 grid gap-4 lg:grid-cols-[1.05fr_.95fr]">
           <div className="relative overflow-hidden rounded-2xl bg-[#102a43] p-5 text-white shadow-lg sm:p-7">
             <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#d4af37]/25" />
