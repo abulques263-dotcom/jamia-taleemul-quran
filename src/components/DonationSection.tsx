@@ -12,7 +12,7 @@ const donationTypes = [
 
 export const DonationSection: React.FC = () => {
   return (
-    <section id="donation" className="relative overflow-hidden bg-[#fdf8ed] py-10 sm:py-14">
+    <section id="donation-options" className="relative overflow-hidden bg-[#fdf8ed] py-10 sm:py-14">
       <div className="pointer-events-none absolute -right-24 -top-20 h-80 w-80 rounded-full bg-[#d4af37]/15 blur-3xl" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-7 max-w-3xl text-center">
