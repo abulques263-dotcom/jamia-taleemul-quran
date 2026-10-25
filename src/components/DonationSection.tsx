@@ -1,4 +1,4 @@
-import React;
+import React from 'react';
 import { INSTITUTION_DATA } from '../data/institutionData';
 import { HeartHandshake, Phone, MessageCircle, ShieldCheck, BookOpen, GraduationCap, WalletCards, MoonStar, HandHeart, Sparkles } from 'lucide-react';
 
