@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProspectus }) => {
   const navLinks = [
     { label: 'Home', href: '#/home', icon: BookOpen },
     { label: 'About & Learning', href: '#/academics', icon: GraduationCap },
-    { label: 'Gallery', href: '#/donate', icon: HeartHandshake },
+    { label: 'Gallery', href: '#/gallery', icon: HeartHandshake }, { label: 'Contact', href: '#/contact', icon: MessageCircle },
   ];
 
   return (
