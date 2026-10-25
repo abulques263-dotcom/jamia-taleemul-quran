@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { INSTITUTION_DATA } from '../data/institutionData';
-import { HeartHandshake, Phone, MessageCircle, ShieldCheck, BookOpen, GraduationCap, WalletCards, MoonStar, HandHeart, Sparkles, Landmark, ChevronDown } from 'lucide-react';
+import { HeartHandshake, Phone, MessageCircle, ShieldCheck, BookOpen, GraduationCap, WalletCards, MoonStar, HandHeart, Sparkles, ChevronDown } from 'lucide-react';
 
 const donationTypes = [
   { title: 'Zakat', urdu: 'زکوٰۃ', icon: MoonStar, description: 'A required form of giving for eligible Muslims. Ask the Jamia to confirm whether your Zakat can be accepted for the intended use.', message: 'Assalamu Alaikum, I would like to ask about giving Zakat to Jamia Taleemul Quran. Please confirm eligibility and share verified official details.' },
