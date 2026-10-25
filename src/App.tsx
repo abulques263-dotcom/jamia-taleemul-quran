@@ -14,7 +14,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProspectusModal } from './components/ProspectusModal';
 import { ChatbotWidget } from './components/ChatbotWidget';
-import { Phone, MessageCircle, ArrowRight, BookOpen, GraduationCap, Users } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, BookOpen, GraduationCap, Users, HeartHandshake } from 'lucide-react';
 import { INSTITUTION_DATA } from './data/institutionData';
 
 type Page = 'home' | 'academics' | 'donate' | 'gallery' | 'contact';
