@@ -16,7 +16,7 @@ export const Hero: React.FC = () => (
       <p dir="rtl" className="urdu text-lg font-semibold leading-[1.5] text-[#f1d592] sm:text-2xl sm:leading-[1.8]">{INSTITUTION_DATA.taglineUrdu}</p>
       <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-slate-200 sm:mt-3 sm:text-base sm:leading-7">{INSTITUTION_DATA.taglineEnglish}</p>
       <div className="mx-auto mt-4 grid max-w-xl grid-cols-2 gap-2 sm:mt-6 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
-        <a href="#/support" id="hero-donate-btn" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#d4af37] px-4 py-3 text-sm font-bold text-[#102a43] shadow-lg transition hover:bg-[#f1d592] sm:px-6"><HeartHandshake className="h-5 w-5" />Donate</a>
+        <a href="#/donate" id="hero-donate-btn" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#d4af37] px-4 py-3 text-sm font-bold text-[#102a43] shadow-lg transition hover:bg-[#f1d592] sm:px-6"><HeartHandshake className="h-5 w-5" />Donate</a>
         <a href="#/academics" id="hero-admission-btn" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-3 py-3 text-xs font-bold text-white transition hover:bg-white/15 sm:px-5 sm:text-sm"><GraduationCap className="h-5 w-5 shrink-0 text-[#f1d592]" />About & Admissions</a>
         <a href="#/contact" id="hero-contact-btn" className="col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[#d4af37]/60 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 sm:col-span-1 sm:min-h-12 sm:py-3"><MessageCircle className="h-5 w-5 text-[#f1d592]" />Contact</a>
       </div>
