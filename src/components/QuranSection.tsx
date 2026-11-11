@@ -3,7 +3,7 @@ import { BookOpen, ChevronDown, ExternalLink, LoaderCircle, Languages } from 'lu
 
 type Ayah = { numberInSurah: number; text: string };
 type ApiResponse = { data?: { ayahs?: Ayah[] } };
-const juzNames = ['Alif Lam Meem','Sayaqool','Tilkal Rusul','Lan Tana Loo','Wal Mohsanat','La Yuhibbullah','Wa Iza Samiu','Wa Lau Annana','Qalal Malao','Wa A'lamu','Yatazeroon','Wa Mamin Da’abat','Wa Ma Ubarriu','Rubama','Subhanallazi','Qal Alam','Iqtaraba','Qad Aflaha','Wa Qalallazina','Amman Khalaq','Utlu Ma Oohi','Wa Manyaqnut','Wa Mali','Faman Azlam','Elahe Yuraddu','Ha Meem','Qala Fama Khatbukum','Qad Sami Allah','Tabarakallazi','Amma'];
+const juzNames = ['Alif Lam Meem','Sayaqool','Tilkal Rusul','Lan Tana Loo','Wal Mohsanat','La Yuhibbullah','Wa Iza Samiu','Wa Lau Annana','Qalal Malao','Wa Alamu','Yatazeroon','Wa Mamin Da’abat','Wa Ma Ubarriu','Rubama','Subhanallazi','Qal Alam','Iqtaraba','Qad Aflaha','Wa Qalallazina','Amman Khalaq','Utlu Ma Oohi','Wa Manyaqnut','Wa Mali','Faman Azlam','Elahe Yuraddu','Ha Meem','Qala Fama Khatbukum','Qad Sami Allah','Tabarakallazi','Amma'];
 
 export const QuranSection: React.FC = () => {
   const [selectedJuz, setSelectedJuz] = useState(1);
