@@ -47,14 +47,14 @@
 .islamic-border-gold { border-color: rgba(212, 175, 55, .4); }
 
 /* Align the remaining page sections with the new palette, including components that use legacy green utility classes. */
-.bg-\[\#064e3b\] { background-color: #102a43 !important; }
-.text-\[\#064e3b\] { color: #102a43 !important; }
-.border-\[\#064e3b\] { border-color: #102a43 !important; }
-.hover\:bg-\[\#064e3b\]:hover { background-color: #102a43 !important; }
-.hover\:text-\[\#064e3b\]:hover { color: #102a43 !important; }
-.selection\:bg-\[\#064e3b\] ::selection { background-color: #102a43; }
-.bg-\[\#fdfbf7\] { background-color: #fdf8ed !important; }
-.bg-\[\#f8f6f0\] { background-color: #fdf8ed !important; }
+.bg-\\[\\#064e3b\\] { background-color: #102a43 !important; }
+.text-\\[\\#064e3b\\] { color: #102a43 !important; }
+.border-\\[\\#064e3b\\] { border-color: #102a43 !important; }
+.hover\\:bg-\\[\\#064e3b\\]:hover { background-color: #102a43 !important; }
+.hover\\:text-\\[\\#064e3b\\]:hover { color: #102a43 !important; }
+.selection\\:bg-\\[\\#064e3b\\] ::selection { background-color: #102a43; }
+.bg-\\[\\#fdfbf7\\] { background-color: #fdf8ed !important; }
+.bg-\\[\\#f8f6f0\\] { background-color: #fdf8ed !important; }
 
 /* Print styles for the prospectus */
 @media print {
@@ -73,4 +73,7 @@ main > section h2 { line-height: 1.25; }
 @media (max-width: 640px) {
   main > section { scroll-margin-top: 5.5rem; }
   .urdu { overflow-wrap: anywhere; }
+  .font-urdu { line-height: 1.65; }
+  .font-urdu-heading { line-height: 1.5; }
+  .fixed.bottom-0.left-0.right-0 { padding-bottom: max(.5rem, env(safe-area-inset-bottom)); }
 }
