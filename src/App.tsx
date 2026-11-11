@@ -19,10 +19,10 @@ import { ChatbotWidget } from './components/ChatbotWidget';
 import { Phone, MessageCircle, ArrowRight, BookOpen, GraduationCap, Users } from 'lucide-react';
 import { INSTITUTION_DATA } from './data/institutionData';
 
-type Page = 'home' | 'academics' | 'donate' | 'gallery' | 'contact' | 'hadith' | 'fatwa';
+type Page = 'home' | 'academics' | 'quran' | 'donate' | 'gallery' | 'contact' | 'hadith' | 'fatwa';
 const readPage = (): Page => {
   const route = decodeURIComponent(window.location.hash).replace(/^#\/?/, '').split('/')[0].split('#')[0];
-  return ['academics', 'donate', 'gallery', 'contact', 'hadith', 'fatwa'].includes(route) ? route as Page : route === 'support' ? 'donate' : 'home';
+  return ['academics', 'quran', 'donate', 'gallery', 'contact', 'hadith', 'fatwa'].includes(route) ? route as Page : route === 'support' ? 'donate' : 'home';
 };
 
 export default function App() {
@@ -62,6 +62,7 @@ export default function App() {
             </div>
           </section>
         </>}
+        {page === 'quran' && <><QuranSection /></>}
         {page === 'academics' && <>
           <div className="bg-islamic-pattern px-4 pb-8 pt-24 text-center text-white sm:pb-10 sm:pt-28"><p className="text-[10px] font-bold uppercase tracking-[.24em] text-[#f1d592]">The Jamia</p><h1 className="urdu mt-2 text-2xl font-bold sm:text-4xl">تعلیم و تربیت</h1><p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-white/75">Study, admissions and student life at Jamia Taleemul Quran.</p></div>
           <AboutSection /><CoursesSection /><QuranSection /><StudentsSection /><TeachersSection /><AdmissionSection /><ProspectusSection onOpenModal={() => setIsProspectusModalOpen(true)} />
