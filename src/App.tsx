@@ -29,7 +29,7 @@ export default function App() {
   const [isProspectusModalOpen, setIsProspectusModalOpen] = useState(false);
   const [page, setPage] = useState<Page>(readPage);
   useEffect(() => {
-    const syncRoute = () => { const nextPage = readPage(); setPage(nextPage); window.setTimeout(() => { const id = window.location.hash.split('#')[2]; if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); };
+    const syncRoute = () => { const nextPage = readPage(); setPage(nextPage); window.setTimeout(() => { const id = decodeURIComponent(window.location.hash).split('#').slice(2).join('#'); if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); };
     window.addEventListener('hashchange', syncRoute);
     return () => window.removeEventListener('hashchange', syncRoute);
   }, []);
