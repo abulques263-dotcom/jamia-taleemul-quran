@@ -21,22 +21,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProspectus }) => {
   ];
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#102a43]/95 backdrop-blur-md shadow-xl border-b border-[#d4af37]/80 py-2' : 'bg-[#102a43] border-b border-[#d4af37]/80 py-3'}`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3">
-          <a href="#/home" id="nav-brand-logo" className="flex min-w-0 items-center gap-2.5 text-left">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-xl font-bold text-[#102a43] shadow-md">ق</div>
+    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#102a43]/95 backdrop-blur-md shadow-xl border-b border-[#d4af37]/80 py-1.5 sm:py-2' : 'bg-[#102a43] border-b border-[#d4af37]/80 py-2 sm:py-3'}`}>
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
+          <a href="#/home" id="nav-brand-logo" className="flex min-w-0 items-center gap-2 text-left sm:gap-2.5">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-xl font-bold text-[#102a43] shadow-md sm:h-10 sm:w-10">ق</div>
             <div className="flex min-w-0 flex-col">
-              <span dir="rtl" className="urdu select-none text-base font-bold leading-tight text-white sm:text-xl">{INSTITUTION_DATA.nameUrdu}</span>
-              <span className="mt-0.5 truncate text-[9px] font-semibold uppercase tracking-wide text-[#f1d592] sm:text-[11px]">{INSTITUTION_DATA.nameEnglish} · Estd. 2006</span>
+              <span dir="rtl" className="urdu select-none whitespace-nowrap text-[clamp(.78rem,4vw,1rem)] font-bold leading-[1.35] text-white sm:text-xl sm:leading-tight">{INSTITUTION_DATA.nameUrdu}</span>
+              <span className="mt-0.5 truncate text-[8px] font-semibold uppercase tracking-wide text-[#f1d592] sm:text-[11px]">{INSTITUTION_DATA.nameEnglish} · Estd. 2006</span>
             </div>
           </a>
           <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => <a key={link.label} href={link.href} className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-[#f1d592]">{link.label}</a>)}
             <a href="#/donate" className="ml-2 inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#d4af37] px-4 py-2 text-sm font-bold text-[#102a43] shadow-sm transition hover:bg-[#f1d592]"><HeartHandshake className="h-4 w-4" />Donate</a>
           </nav>
-          <div className="flex items-center gap-2 lg:hidden">
-            <a href="#/donate" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg bg-[#d4af37] px-3 py-2 text-xs font-bold text-[#102a43] sm:text-sm"><HeartHandshake className="h-4 w-4" />Donate</a>
+          <div className="flex shrink-0 items-center gap-1.5 lg:hidden sm:gap-2">
+            <a href="#/donate" className="inline-flex min-h-9 items-center gap-1 rounded-lg bg-[#d4af37] px-2.5 py-2 text-[11px] font-bold text-[#102a43] sm:px-3 sm:text-sm"><HeartHandshake className="h-4 w-4" />Donate</a>
             <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} id="mobile-menu-toggle-btn" className="rounded-lg p-2 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#d4af37]" aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={mobileMenuOpen}>
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
