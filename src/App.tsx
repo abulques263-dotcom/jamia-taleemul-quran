@@ -75,7 +75,7 @@ export default function App() {
           <ContactSection />
         </>}
       </main>
-      <Footer />
+      {page !== 'home' && <Footer />}
       <ProspectusModal isOpen={isProspectusModalOpen} onClose={() => setIsProspectusModalOpen(false)} />
       <ChatbotWidget />
       <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-2 sm:hidden no-print">
