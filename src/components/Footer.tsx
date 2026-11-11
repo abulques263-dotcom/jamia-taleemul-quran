@@ -1,153 +1,29 @@
 import React from 'react';
 import { INSTITUTION_DATA } from '../data/institutionData';
-import { Phone, MessageCircle, MapPin, BookOpen, ChevronRight, ArrowUp } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, BookOpen, ChevronRight, ArrowUp, HeartHandshake, BookMarked, Scale } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   const quickLinks = [
-    { label: 'Home', href: '#/home' },
-    { label: 'About & Courses', href: '#/academics' },
-    { label: 'Teachers & Staff', href: '#/academics' },
-    { label: 'Admissions', href: '#/academics' },
-    { label: 'Qur’an Learning', href: '#/academics' },
-    { label: 'Zakat / Sadqa / Fitra', href: '#/support' },
-    { label: 'Photo Gallery', href: '#/support' },
-    { label: 'Contact', href: '#/support' },
+    { label: 'Home', href: '#/home' }, { label: 'About & Courses', href: '#/academics' }, { label: 'Teachers & Staff', href: '#/academics' }, { label: 'Admissions', href: '#/academics' }, { label: 'Qur’an Learning', href: '#/academics' }, { label: 'Hadith Library', href: '#/hadith', icon: BookMarked }, { label: 'Deoband Fatwa', href: '#/fatwa', icon: Scale }, { label: 'Donate', href: '#/donate', icon: HeartHandshake }, { label: 'Photo Gallery', href: '#/gallery' }, { label: 'Contact', href: '#/contact' },
   ];
-
   return (
-    <footer className="bg-[#064e3b] text-white border-t-4 border-[#d4af37] relative overflow-hidden">
-      
-      {/* Subtle Background Geometric Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37]/10 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Main Footer Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
-        
-        {/* Top Prominent Identity Section */}
-        <div className="text-center pb-12 border-b border-white/10 max-w-3xl mx-auto">
-          
-          <div className="w-14 h-14 rounded-full bg-[#d4af37] text-[#064e3b] mx-auto flex items-center justify-center mb-4 shadow-md">
-            <BookOpen className="w-7 h-7" />
-          </div>
-
-          {/* Prominent Urdu Institution Name */}
-          <h2 
-            dir="rtl"
-            className="urdu text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[2.2] select-none"
-          >
-            {INSTITUTION_DATA.nameUrdu}
-          </h2>
-
-          <div className="text-xs font-bold tracking-widest text-[#f1d592] uppercase mt-1 font-sans">
-            {INSTITUTION_DATA.nameEnglish} • Estd. 2006
-          </div>
-
-          {/* Prominent Urdu Tagline */}
-          <div className="my-4">
-            <p 
-              dir="rtl"
-              className="urdu text-2xl sm:text-3xl text-[#f1d592] leading-[2.1]"
-            >
-              {INSTITUTION_DATA.taglineUrdu}
-            </p>
-          </div>
-
-          <p className="text-xs sm:text-sm text-stone-300 max-w-xl mx-auto italic font-serif">
-            "{INSTITUTION_DATA.taglineEnglish}"
-          </p>
+    <footer className="relative overflow-hidden border-t-4 border-[#d4af37] bg-[#102a43] text-white">
+      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+        <div className="mx-auto max-w-3xl border-b border-white/10 pb-8 text-center sm:pb-10">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#d4af37] text-[#102a43] shadow-md sm:h-14 sm:w-14"><BookOpen className="h-6 w-6 sm:h-7 sm:w-7" /></div>
+          <h2 dir="rtl" className="urdu select-none text-3xl font-bold leading-[1.7] text-white sm:text-4xl">{INSTITUTION_DATA.nameUrdu}</h2>
+          <div className="mt-1 text-[10px] font-bold uppercase tracking-widest text-[#f1d592]">{INSTITUTION_DATA.nameEnglish} • Estd. 2006</div>
+          <p dir="rtl" className="urdu mt-2 text-lg leading-[1.8] text-[#f1d592]">{INSTITUTION_DATA.taglineUrdu}</p>
+          <p className="mx-auto mt-2 max-w-xl text-xs italic leading-5 text-stone-300">“{INSTITUTION_DATA.taglineEnglish}”</p>
         </div>
-
-        {/* Middle Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 py-12 border-b border-white/10 text-sm">
-          
-          {/* Column 1: About Brief */}
-          <div className="md:col-span-4 space-y-3">
-            <div className="font-bold text-sm text-[#f1d592] tracking-wider uppercase font-sans">
-              About Jamia
-            </div>
-            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed font-serif">
-              Founded in 2006 by Qari Ashfaque to provide Qur'anic education, Islamic learning, moral upbringing, and essential academic education.
-            </p>
-            <div className="pt-2 text-xs text-[#f1d592] font-serif">
-              Founder / Mohtamim: <strong className="text-white">Qari Ashfaque (قاری اشفاق)</strong>
-            </div>
-          </div>
-
-          {/* Column 2: Quick Links */}
-          <div className="md:col-span-4 space-y-3">
-            <div className="font-bold text-sm text-[#f1d592] tracking-wider uppercase font-sans">
-              Quick Links
-            </div>
-            <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm font-sans">
-              {quickLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="flex items-center gap-1.5 text-stone-300 hover:text-[#f1d592] transition-colors py-1 font-medium"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-[#d4af37]" />
-                  <span>{link.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Column 3: Contact Details */}
-          <div className="md:col-span-4 space-y-3">
-            <div className="font-bold text-sm text-[#f1d592] tracking-wider uppercase font-sans">
-              Contact Us
-            </div>
-
-            <div className="space-y-2.5 text-xs sm:text-sm text-stone-300 font-serif">
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#d4af37] flex-shrink-0" />
-                <a href={`tel:${INSTITUTION_DATA.phone}`} className="hover:text-white font-mono">
-                  {INSTITUTION_DATA.phone}
-                </a>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0" />
-                <a 
-                  href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white font-mono"
-                >
-                  {INSTITUTION_DATA.whatsapp}
-                </a>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">
-                  {INSTITUTION_DATA.address}
-                </span>
-              </div>
-            </div>
-          </div>
-
+        <div className="grid gap-8 border-b border-white/10 py-8 text-sm sm:grid-cols-2 sm:gap-10 sm:py-9 lg:grid-cols-3">
+          <div className="space-y-2"><h3 className="text-xs font-bold uppercase tracking-wider text-[#f1d592]">About Jamia</h3><p className="text-xs leading-5 text-stone-300 sm:text-sm">Founded in 2006 by Qari Ashfaque for Qur’anic education, Islamic learning, moral upbringing and essential academic education.</p><p className="text-xs text-[#f1d592]">Founder / Mohtamim: <strong className="text-white">Qari Ashfaque (قاری اشفاق)</strong></p></div>
+          <div className="space-y-2"><h3 className="text-xs font-bold uppercase tracking-wider text-[#f1d592]">Quick Links</h3><nav className="grid grid-cols-2 gap-x-2 gap-y-1 text-xs sm:text-sm">{quickLinks.map(({label,href})=><a key={label} href={href} className="flex min-h-8 items-center gap-1.5 text-stone-300 transition hover:text-[#f1d592]"><ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#d4af37]" />{label}</a>)}</nav></div>
+          <div className="space-y-2"><h3 className="text-xs font-bold uppercase tracking-wider text-[#f1d592]">Contact Us</h3><div className="space-y-2 text-xs text-stone-300 sm:text-sm"><div className="flex items-center gap-3"><Phone className="h-4 w-4 shrink-0 text-[#d4af37]" /><a href={`tel:${INSTITUTION_DATA.phone}`} className="font-mono hover:text-white">{INSTITUTION_DATA.phoneFormatted}</a></div><div className="flex items-center gap-3"><MessageCircle className="h-4 w-4 shrink-0 text-[#d4af37]" /><a href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}`} target="_blank" rel="noopener noreferrer" className="font-mono hover:text-white">{INSTITUTION_DATA.whatsappFormatted}</a></div><div className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#d4af37]" /><span className="leading-5">{INSTITUTION_DATA.address}</span></div></div></div>
         </div>
-
-        {/* Bottom Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400 font-serif">
-          <div>
-            {INSTITUTION_DATA.copyright}
-          </div>
-
-          <button
-            onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-stone-200 transition-colors font-sans text-xs font-bold uppercase tracking-wider"
-          >
-            <span>Back to Top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
-        </div>
-
+        <div className="flex flex-col items-center justify-between gap-3 pt-5 text-center text-[10px] text-stone-400 sm:flex-row sm:text-left sm:text-xs"><span>{INSTITUTION_DATA.copyright}</span><button onClick={scrollToTop} className="inline-flex min-h-9 items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 font-bold uppercase tracking-wider text-stone-200 transition hover:bg-white/20"><span>Back to Top</span><ArrowUp className="h-3.5 w-3.5" /></button></div>
       </div>
     </footer>
   );
