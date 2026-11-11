@@ -21,7 +21,7 @@ import { INSTITUTION_DATA } from './data/institutionData';
 
 type Page = 'home' | 'academics' | 'donate' | 'gallery' | 'contact' | 'hadith' | 'fatwa';
 const readPage = (): Page => {
-  const route = window.location.hash.replace(/^#\/?/, '').split('/')[0].split('#')[0];
+  const route = decodeURIComponent(window.location.hash).replace(/^#\/?/, '').split('/')[0].split('#')[0];
   return ['academics', 'donate', 'gallery', 'contact', 'hadith', 'fatwa'].includes(route) ? route as Page : route === 'support' ? 'donate' : 'home';
 };
 
