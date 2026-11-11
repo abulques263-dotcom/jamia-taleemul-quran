@@ -73,7 +73,7 @@ export default function App() {
         {page === 'fatwa' && <FatwaPage />}
       </main>
       <Footer /><ProspectusModal isOpen={isProspectusModalOpen} onClose={() => setIsProspectusModalOpen(false)} /><ChatbotWidget />
-      <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-2 sm:hidden no-print"><a href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}?text=Assalamu%20Alaikum`} target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg ring-2 ring-white" aria-label="Chat on WhatsApp"><MessageCircle className="h-5 w-5" /></a><a href={`tel:${INSTITUTION_DATA.phone}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-[#102a43] text-[#f1d592] shadow-lg ring-2 ring-white" aria-label="Call Jamia Taleemul Quran"><Phone className="h-4 w-4" /></a></div>
+      <div className="fixed bottom-5 right-20 z-40 flex flex-col gap-2 sm:hidden no-print"><a href={`https://wa.me/91${INSTITUTION_DATA.whatsapp}?text=Assalamu%20Alaikum`} target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg ring-2 ring-white" aria-label="Chat on WhatsApp"><MessageCircle className="h-5 w-5" /></a><a href={`tel:${INSTITUTION_DATA.phone}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-[#102a43] text-[#f1d592] shadow-lg ring-2 ring-white" aria-label="Call Jamia Taleemul Quran"><Phone className="h-4 w-4" /></a></div>
     </div>
   );
 }
