@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProspectus }) => {
   const navLinks = [
     { label: t.study, href: '#/academics', icon: BookOpen },
     { label: t.admission, href: '#/academics%23admission', icon: GraduationCap },
-    { label: t.quran, href: '#/academics%23quran', icon: ScrollText },
+    { label: t.quran, href: '#/quran', icon: ScrollText },
     { label: t.hadith, href: '#/hadith', icon: BookMarked },
     { label: t.fatwa, href: '#/fatwa', icon: Scale },
     { label: t.teachers, href: '#/academics%23teachers', icon: Users },
