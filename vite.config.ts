@@ -4,8 +4,8 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // GitHub Pages repository path
-  base: '/jamia-taleemul-quran/',
+  // GitHub Pages serves this repository under a subpath; Vercel serves from the domain root.
+  base: process.env.GITHUB_ACTIONS ? '/jamia-taleemul-quran/' : '/',
 
   plugins: [react(), tailwindcss()],
 
